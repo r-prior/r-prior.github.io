@@ -86,7 +86,6 @@
     function extract() {
       let T = document.getElementById("textarea");
       let result = document.getElementById("result");
-      result.innerHTML = T.value;
       showInput(T.value);
     }
 
@@ -101,11 +100,18 @@
           pigeon[word] = 1;
         }
       }
-
+      let pigeonsize = Object.keys(pigeon).length;
+      var theresults = "";
+      for (i = 0; i < pigeonsize; i++) {
+        theresults +=
+          "<div>" +
+          Object.keys(pigeon)[i] +
+          " " +
+          Object.values(pigeon)[i] +
+          " </div>";
+      }
+      result.innerHTML = theresults;
       console.log(pigeon);
-
-      //Return an object which shows all words and how many occurences for the text area input
-      // Push to Github !
     }
   </script>
 </html>
