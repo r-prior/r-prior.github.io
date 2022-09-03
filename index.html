@@ -38,23 +38,30 @@
   <body>
     <div class="container">
       <h1 class="heading">Free Keyword Extract & Count Tool</h1>
-      <p>
-        Paste your text into the box below, and click 'Extract'. The output will
-        be a list of the words used in your exerpt, with the frequency of each
-        word.
-      </p>
-      <div class="mb-3">
-        <textarea id="textarea" class="form-control"> </textarea>
+      <div class="row">
+        <div class="col-sm">
+          <p>
+            Paste your text into the box below, and click 'Extract'. The output
+            will be a list of the words used in your exerpt, with the frequency
+            of each word.
+          </p>
+          <div class="mb-3">
+            <textarea id="textarea" class="form-control"> </textarea>
+          </div>
+          <div>
+            <button class="btn btn-primary btn-lg" onclick="extract()">
+              Extract
+            </button>
+          </div>
+
+          <div class="col-sm">
+            <div>
+              <h2 class="h2">Results</h2>
+            </div>
+            <div id="result" class="box"></div>
+          </div>
+        </div>
       </div>
-      <div>
-        <button class="btn btn-primary btn-lg" onclick="extract()">
-          Extract
-        </button>
-      </div>
-      <div>
-        <h2 class="h2">Results</h2>
-      </div>
-      <div id="result" class="box"></div>
     </div>
   </body>
   <!-- Javascript begins -->
